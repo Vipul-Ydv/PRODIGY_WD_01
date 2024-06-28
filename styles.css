@@ -1,0 +1,135 @@
+/* Basic styles for the navbar */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Roboto&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #5a030356; 
+    z-index: 1000;
+}
+
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 70px;
+}
+
+nav a {
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+
+
+
+nav #icon {
+    color: rgb(185, 40, 40);
+    font-size: 29px;
+    line-height: 75px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1048px) {
+    label.logo {
+        font-size: 32px;
+        padding-left: 60px;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 909px) {
+    nav #icon {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav li {
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    a.active,
+    a:hover {
+        border: none;
+        color: #000000;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+}
+.logo {
+    width: 50px; /* adjust the width to your liking */
+    height: 50px; /* adjust the height to your liking */
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+section {
+    background: url('https://images.unsplash.com/photo-1556189250-72ba954cfc2b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') ;
+    background-size: 100%;
+    height: 757px;
+    margin-top: -90px;
+}
+
+/* Styles for when a menu item is hovered over */
+.menu a:hover {
+    color: #b31a1a;
+    transition: .5s;
+}
+
+
+/* Styles for when the menu is scrolled */
+.scrolled {
+background-color: #5a030356;  
+/* Change background color when scrolled */
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+/* Add a shadow on scroll */
+}
